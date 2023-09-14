@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/symbol.png" type="image/x-icon">
+    <title>Funthematics Math Calculator</title>
+    <meta name="description" content="A brief description of your webpage">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="grid-container">
+                <div style="text-align: right; padding-right: 120px;">
+                    <a href="index.html">
+                        <img class="logo" src="src/logo.png" alt="Funthematics">
+                    </a>
+                </div>
+                <!-- <div class="logo">Funthematics</div> -->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#calculation">Calculation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="empty-space"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="nice-text" id="about">
+            <h1 style="text-align: center;">Welcome to Funthematics, Math Calculator</h2>
+            <p>
+                Do you have trouble calculating area and perimeter of basic 2D shapes? Worry not! We know you are too busy to deal with simple tasks such as this.
+                At Funthematics, we make math fun and practical. Whether you're a student working on a geometry assignment or a homeowner planning a DIY project, our easy-to-use online calculator is here to help you calculate the area and perimeter of simple 2D shapes effortlessly.
+            </p>
+        </section>
+
+        <section>
+            <div style="text-align: center;">
+                <img style="width: auto; height: 200px;" src="src/symbol.png" alt="Funthematics">
+            </div>
+        </section>
+
+        <section class="nice-text">
+            <h2>Why choose Funthematics?</h2>
+            <p>
+                <span style="font-weight: bold;">Simplicity at Your Fingertips:</span> 
+                No complex equations or confusing formulas. Our user-friendly interface ensures that you can calculate areas and perimeters with just a few clicks.
+            </p>
+
+            <p>
+                <span style="font-weight: bold;">Multiple Shapes Supported:</span> 
+                From rectangles and circles to triangles and parallelograms, we've got you covered. Choose your shape, input your dimensions, and let us handle the math.
+            </p>
+
+            <p>
+                <span style="font-weight: bold;">Visualize Your Calculations:</span> 
+                Our dynamic diagrams provide a clear visual representation of the shape you're working with, making it easier than ever to understand your calculations.
+            </p>
+
+            <p>
+                <span style="font-weight: bold;">Save Time and Effort:</span> 
+                Say goodbye to manual calculations and potential errors. Funthematics streamlines the process, giving you quick and accurate results.
+            </p>
+
+            <p>
+                <span style="font-weight: bold;">Educational Resources:</span> 
+                Whether you're a student looking to learn or a teacher seeking teaching aids, we offer educational resources to enhance your math knowledge.
+            </p>
+
+            <p>
+                <span style="font-weight: bold;">Mobile-Friendly:</span> 
+                Access Funthematics on the go. Our website is fully responsive, so you can calculate areas and perimeters from your smartphone or tablet.
+            </p>
+
+            <p>
+                <span style="font-weight: bold;">It's Free!:</span> 
+                Math shouldn't be a barrier. Funthematics is completely free to use. No subscriptions, no hidden fees—just math made easy.
+            </p>
+        </section>
+
+        <section id="calculation">
+            <h1>Let's Calculate!</h1>
+            <div class="container">
+                <form id="form">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="shape">Select the shape:</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="shape" name="shape">
+                                <option value="none">Select One</option>
+                                <option value="square">Square</option>
+                                <option value="rectangle">Rectangle</option>
+                                <option value="triangle">Triangle</option>
+                                <option value="circle">Circle</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="square" style="display: none;">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="squareSide">Side:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="squareSide" name="squareSide" placeholder="Insert numbers..." step="0.01">
+                                <!-- <span class="error" id="squareErr">*Required.</span> -->
+                            </div>
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="col">
+                                <img style="max-width: 80%; max-height: 80%;" src="src/square.png">
+                            </div>
+                            <div class="col">
+                                <p>Area = side x side</p>
+                                <p>Perimeter = 4 x side</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rectangle" style="display: none;">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="rectLength">Length:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="rectLength" name="rectLength" placeholder="Insert numbers..." step="0.01">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="rectWidth">Width:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="rectWidth" name="rectWidth" placeholder="Insert numbers..." step="0.01">
+                            </div>
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="col">
+                                <img style="max-width: 100%; max-height: 100%;" src="src/rectangle.png">
+                            </div>
+                            <div class="col">
+                                <p>Area = length x width</p>
+                                <p>Perimeter = 2 x (length + width)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="triangle" style="display: none;">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="triangleBase">Base:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="triangleBase" name="triangleBase" placeholder="Insert numbers..." step="0.01">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="triangleHeight">Height:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="triangleHeight" name="triangleHeight" placeholder="Insert numbers..." step="0.01">
+                            </div>
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="col">
+                                <img style="max-width: 50%; max-height: 50%;" src="src/triangle.png">
+                            </div>
+                            <div class="col">
+                                <p>Area = ½ x base x height</p>
+                                <p>Perimeter = 3 x base</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="circle" style="display: none;">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="circleRad">radius:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="circleRad" name="circleRad" placeholder="Insert numbers..." step="0.01">
+                            </div>
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="col">
+                                <img style="max-width: 80%; max-height: 80%;" src="src/circle.png">
+                            </div>
+                            <div class="col">
+                                <p>Area = π x r^2</p>
+                                <p>Perimeter = 2 x π x r</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding-top: 10px;">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+
+                <div id="result" style="display: none;">
+                    <p>Area      : <span id="area">value</span></p>
+                    <p>Perimeter : <span id="perimeter">value</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Meet the Creator!</h1>
+            <div class="container" style="background-color: white;">
+                <div class="col-25">
+                    <img class="logo" src="src/profile.png" alt="Profile Picture">
+                </div>
+                <div class="col-75">
+                    <p>Hello there!</p>
+                    <p>
+                        Coffee aficionados, tea enthusiasts, shower-time singers, and late-night game developers, gather 'round! 
+                        If you're wondering what happens when you combine caffeine, musical dreams, and a penchant for coding, 
+                        well, you're about to find out. Meet <span style="font-weight: bold;">Fransiskus Aric</span>! 
+                        There's nothing random about the awesomeness you're about to experience!
+                    </p>
+                    <p>LinkedIn: in/fransiskusaric</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Start exploring the world of geometry with confidence. Try Funthematics today and empower yourself with the math skills you need for success!</p>
+        <p class="copyright">&copy; 2023 www.funthematics.com</p>
+    </footer>
+
+</body>
+</html>
